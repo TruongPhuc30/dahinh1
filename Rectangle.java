@@ -36,7 +36,8 @@ public class Rectangle extends Shape {
     }
 
     /**
-     * Constructor khởi tạo Rectangle với chiều rộng, chiều dài, màu sắc và trạng thái filled tùy chọn.
+     * Constructor khởi tạo Rectangle với chiều rộng, chiều dài, màu sắc 
+       và trạng thái filled tùy chọn.
      *
      * @param width  chiều rộng
      * @param length chiều dài
@@ -106,12 +107,14 @@ public class Rectangle extends Shape {
     }
 
     /**
-     * Trả về chuỗi mô tả hình chữ nhật, bao gồm chiều rộng, chiều dài, màu sắc và trạng thái filled.
+     * Trả về chuỗi mô tả hình chữ nhật, bao gồm chiều rộng, chiều dài, màu sắc 
+       và trạng thái filled.
      *
      * @return chuỗi mô tả hình chữ nhật
      */
     @Override
     public String toString() {
-        return "Rectangle[width=" + width + ",length=" + length + ",color=" + color + ",filled=" + filled + "]";
+        return "Rectangle[width=" + width + ",length=" + length + ",color=" + color 
+                + ",filled=" + filled + "]";
     }
 }
