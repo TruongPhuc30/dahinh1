@@ -7,7 +7,7 @@ public class Circle extends Shape {
     /**
      * Bán kính của hình tròn.
      */
-    private double radius;
+    protected double radius;
 
     /**
      * Constructor mặc định.
