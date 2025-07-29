@@ -85,6 +85,6 @@ public class Circle extends Shape {
      */
     @Override
     public String toString() {
-        return "Circle[radius=" + radius + ", color=" + color + ", filled=" + filled + "]";
+        return "Circle[radius=" + radius + ",color=" + color + ",filled=" + filled + "]";
     }
 }
