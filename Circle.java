@@ -63,4 +63,30 @@ public class Circle extends Shape {
     public String toString() {
         return "Circle[radius=" + radius + ",color=" + color + ",filled=" + filled + "]";
     }
+    
+     /**
+     * So sánh hai đối tượng Circle có bằng nhau không.
+     *
+     * @param o đối tượng cần so sánh
+     * @return true nếu bằng nhau, false nếu không
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Circle)) return false;
+        Circle other = (Circle) o;
+        return Double.compare(radius, other.radius) == 0 &&
+                Objects.equals(color, other.color) &&
+                filled == other.filled;
+    }
+
+    /**
+     * Tạo mã băm cho đối tượng Circle.
+     *
+     * @return mã băm
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(radius, color, filled);
+    }
 }
