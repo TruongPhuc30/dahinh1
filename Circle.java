@@ -55,9 +55,11 @@ public class Circle extends Shape {
         return  3.14 * radius * radius;
     }
 
-    public double getPerimeter(){
+    public double getPerimeter() {
         return 2 * 3.14 * radius;
     }
+
+    @Override
     public String toString() {
         return "Circle[radius=" + radius + ",color=" + color + ",filled=" + filled + "]";
     }
