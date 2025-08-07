@@ -68,13 +68,8 @@ public abstract class Shape {
 
     /**
      * Tính diện tích của hình.
-     * Lớp Shape mặc định trả về 0, các lớp con nên ghi đè phương thức này.
-     *
-     * @return diện tích của hình
      */
-    public double getArea() {
-        return 0;
-    }
+    public abstract double getArea();
 
     /**
      * Tính chu vi của hình.
@@ -82,9 +77,7 @@ public abstract class Shape {
      *
      * @return chu vi của hình
      */
-    public double getPerimeter() {
-        return 0;
-    }
+    public abstract double getPerimeter();
 
     /**
      * Trả về chuỗi mô tả hình, bao gồm màu sắc và trạng thái filled.
