@@ -117,4 +117,31 @@ public class Rectangle extends Shape {
         return "Rectangle[width=" + width + ",length=" + length + ",color=" + color 
                 + ",filled=" + filled + "]";
     }
+    
+     /**
+     * So sánh hai đối tượng Rectangle có bằng nhau không.
+     *
+     * @param o đối tượng cần so sánh
+     * @return true nếu bằng nhau, false nếu không
+     */
+     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Rectangle)) return false;
+        Rectangle other = (Rectangle) o;
+        return Double.compare(width, other.width) == 0 &&
+                Double.compare(length, other.length) == 0 &&
+                Objects.equals(color, other.color) &&
+                filled == other.filled;
+    }
+
+     /**
+     * Tạo mã băm cho đối tượng Rectangle.
+     *
+     * @return mã băm
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(width, length, color, filled);
+    }
 }
