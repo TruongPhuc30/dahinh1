@@ -1,17 +1,15 @@
 /**
- * Lớp Circle đại diện cho hình tròn, kế thừa từ Shape.
- * Chứa thông tin về bán kính, màu sắc và trạng thái filled.
+ * Lớp Circle đại diện cho hình tròn với bán kính và màu sắc.
  */
 public class Circle extends Shape {
 
     /**
      * Bán kính của hình tròn.
      */
-    protected double radius;
+    protected double radius; // bán kính
 
     /**
-     * Constructor mặc định.
-     * Bán kính = 1.0, màu và trạng thái filled mặc định từ lớp Shape.
+     * Constructor mặc định. Bán kính = 1.0 và màu = "red".
      */
     public Circle() {
         super();
@@ -19,7 +17,7 @@ public class Circle extends Shape {
     }
 
     /**
-     * Constructor khởi tạo Circle với bán kính tùy chọn.
+     * Constructor khởi tạo Circle với bán kính tùy chọn, màu mặc định là "red".
      *
      * @param radius bán kính hình tròn
      */
@@ -29,31 +27,20 @@ public class Circle extends Shape {
     }
 
     /**
-     * Constructor khởi tạo Circle với bán kính, màu sắc và trạng thái filled tùy chọn.
+     * Constructor khởi tạo Circle với bán kính và màu tùy chọn.
      *
-     * @param radius bán kính hình tròn
-     * @param color  màu sắc của hình tròn
-     * @param filled trạng thái filled (true nếu tô màu, false nếu không)
+     * @param radius bán kính
+     * @param color  màu sắc
      */
     public Circle(double radius, String color, boolean filled) {
         super(color, filled);
         this.radius = radius;
     }
 
-    /**
-     * Lấy bán kính của hình tròn.
-     *
-     * @return bán kính hình tròn
-     */
     public double getRadius() {
         return radius;
     }
 
-    /**
-     * Thiết lập bán kính mới cho hình tròn.
-     *
-     * @param radius bán kính mới
-     */
     public void setRadius(double radius) {
         this.radius = radius;
     }
@@ -65,25 +52,12 @@ public class Circle extends Shape {
      */
     @Override
     public double getArea() {
-        return Math.PI * radius * radius;
+        return  3.14 * radius * radius;
     }
 
-    /**
-     * Tính chu vi hình tròn.
-     *
-     * @return chu vi = 2 * PI * r
-     */
-    @Override
-    public double getPerimeter() {
-        return 2 * Math.PI * radius;
+    public double getPerimeter(){
+        return 2 * 3.14 * radius;
     }
-
-    /**
-     * Trả về chuỗi mô tả hình tròn, bao gồm bán kính, màu sắc và trạng thái filled.
-     *
-     * @return chuỗi mô tả hình tròn
-     */
-    @Override
     public String toString() {
         return "Circle[radius=" + radius + ",color=" + color + ",filled=" + filled + "]";
     }
